@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício8</title>
+</head>
+
+<body>
+
+  <script>
+
+    const objeto = {
+      id: "1",
+      nome: "Michael",
+      sobrenome: "Scott",
+      email: "mike@theoffice.com",
+      celular: "202-555-0154",
+
+      nomeCompleto() {
+        return `${this.nome} ${this.sobrenome}`;
+      }
+
+    };
+
+    const { id, email, nomeCompleto, ...resto } = objeto
+
+    console.log(id);
+    console.log(email);
+    console.log(nomeCompleto.call(objeto));
+    console.log(objeto);
+
+  </script>
+</body>
+
+</html>
